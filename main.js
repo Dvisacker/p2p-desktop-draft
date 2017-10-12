@@ -25,7 +25,7 @@ function createWindow () {
   archive.ready(function() {
     discovery(archive)
 
-    var progress = mirror({ name: '/', fs: archive}, dir, function(err) {
+    var progress = mirror({ name: '/download/', fs: archive}, dir, function(err) {
       console.log('done downloading')
     })
 
@@ -34,21 +34,16 @@ function createWindow () {
     })
   })
 
-
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes: true
   }))
 
-
   mainWindow.on('closed', function () {
     mainWindow = null
   })
 }
-
-
-
 
 app.on('ready', createWindow)
 
@@ -60,8 +55,6 @@ app.on('window-all-closed', function () {
 })
 
 app.on('activate', function () {
-
-
   if (mainWindow === null) {
     createWindow()
   }
