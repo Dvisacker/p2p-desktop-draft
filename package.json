@@ -17,6 +17,12 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "~1.7.8"
+    "electron": "~1.7.9"
+  },
+  "dependencies": {
+    "hyperdiscovery": "~7.0.0",
+    "hyperdrive": "~9.9.1",
+    "mirror-folder": "~2.1.1",
+    "random-access-memory": "~2.4.0"
   }
 }
